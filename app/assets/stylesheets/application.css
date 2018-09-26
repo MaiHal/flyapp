@@ -99,7 +99,7 @@ footer p {
 footer {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -28px;
   left: 0;
   padding-top: 30px;
   padding-bottom: 20px;
