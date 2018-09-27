@@ -1,0 +1,340 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333; 
+}
+
+a {
+  text-decoration: none;
+}
+
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: "Copperplate";
+  z-index: 10;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 124px;
+  margin-top: 16px;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-center {
+  float:left;
+  position: relative;
+  left: 15%;
+
+}
+
+.header-center a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-center a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+}
+
+.top-wrapper {
+  padding: 180px 0 100px 0;
+<<<<<<< HEAD:app/assets/stylesheets/tops.css.scss
+  background-image: url(images/american.jpg);
+=======
+  background-image: url(/american.jpg);
+>>>>>>> 36dca297638fb787b944d645efe8d53fcbfe6615:app/assets/stylesheets/tops.css
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 50px;
+  letter-spacing: 5px;
+  font-weight: normal;
+}
+
+.top-wrapper p {
+  opacity: 0.7;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-wrapper p {
+  margin: 10px 0;
+}
+
+.signup {
+  background-color: #239b76;
+}
+
+.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+}
+
+.twitter {
+  background-color: #55acee;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+.photos-wrapper {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: url(/images/quantus.jpg);
+  background-size: cover;
+  text-align: center;
+  color: #5f5d60;
+  position: relative;
+}
+
+.photos {
+  padding: 80px 5px 20px 20px;
+  text-align: left;
+  color: #5f5d60;
+  position: relative;
+}
+
+.photos h1 {
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #fff;
+  padding-right: 30px;
+  font-weight: normal;
+  position: absolute;
+  margin: 0;
+  top: 0px;
+}
+
+.photo {
+  float: left;
+  border-radius: 4px;
+  width: 20%;
+  margin: 0px 22px 0 22px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.photo img {
+  margin: 24px 24px;
+  text-align: center;
+  width: 145px;
+}
+
+.photo-data {
+  margin-bottom: 5px;
+}
+
+.photo-contents {
+  padding-left: 20px;
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.clear {
+  clear: left;
+}
+
+.repo-wrapper {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: url(thai.jpg);
+  background-size: cover;
+  text-align: center;
+  color: #5f5d60;
+  position: relative;
+}
+
+.reports {
+  padding: 80px 5px 20px 20px;
+  text-align: left;
+  color: #5f5d60;
+  position: relative;
+}
+
+.reports h1 {
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #fff;
+  padding-right: 30px;
+  font-weight: normal;
+  position: absolute;
+  margin: 0;
+  top: 0px;
+}
+
+.report {
+  float: left;
+  width: 25%;
+  margin: 0px 32px 0 32px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+}
+
+.report img {
+  margin: 30px 30px 10px 30px;
+  text-align: center;
+  width: 180px;
+}
+
+.report-data {
+  margin-bottom: 10px;
+}
+
+.report-contents {
+  padding-left: 20px;
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.news-wrapper {
+  height: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: url(alitalia.jpg);
+  background-size: cover;
+  text-align: center;
+  color: #5f5d60;
+}
+
+.news {
+  padding: 80px 5px 20px 20px;
+  text-align: left;
+  color: #5f5d60;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+.news h2 {
+  border-bottom: 1px solid #5f5d60;
+  padding-right: 30px;
+  font-weight: normal;
+  position: absolute;
+  margin-bottom: 0;
+  top: 0px;
+}
+
+.title {
+}
+
+.date-contents {
+  width: 10%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.text-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.heading h3 {
+  font-weight: normal;
+}
+
+.message-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.message {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  width: 100%;
+  left: 0;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+}
