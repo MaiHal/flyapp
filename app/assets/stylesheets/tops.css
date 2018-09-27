@@ -77,7 +77,7 @@ header {
 
 .top-wrapper {
   padding: 180px 0 100px 0;
-  background-image: url(/american.jpg);
+  background-image: url(/images/background/american.jpg);
   background-size: cover;
   color: white;
   text-align: center;
@@ -139,7 +139,7 @@ header {
   padding-bottom: 50px;
   padding-left: 5%;
   padding-right: 5%;
-  background-image: url(/images/quantus.jpg);
+  background-image: url(/images/background/quantus.jpg);
   background-size: cover;
   text-align: center;
   color: #5f5d60;
@@ -199,7 +199,7 @@ header {
   padding-bottom: 30px;
   padding-left: 5%;
   padding-right: 5%;
-  background-image: url(thai.jpg);
+  background-image: url(/images/background/thai.jpg);
   background-size: cover;
   text-align: center;
   color: #5f5d60;
@@ -255,7 +255,7 @@ header {
   padding-bottom: 80px;
   padding-left: 5%;
   padding-right: 5%;
-  background-image: url(alitalia.jpg);
+  background-image: url(/images/background/alitalia.jpg);
   background-size: cover;
   text-align: center;
   color: #5f5d60;
