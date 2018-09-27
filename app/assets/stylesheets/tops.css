@@ -77,11 +77,7 @@ header {
 
 .top-wrapper {
   padding: 180px 0 100px 0;
-<<<<<<< HEAD:app/assets/stylesheets/tops.css.scss
-  background-image: url(images/american.jpg);
-=======
   background-image: url(/american.jpg);
->>>>>>> 36dca297638fb787b944d645efe8d53fcbfe6615:app/assets/stylesheets/tops.css
   background-size: cover;
   color: white;
   text-align: center;
