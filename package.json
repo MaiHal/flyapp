@@ -1,5 +1,7 @@
 {
   "name": "flyapp",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "yarn": "^1.10.0"
+  }
 }
