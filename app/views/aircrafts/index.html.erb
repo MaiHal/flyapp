@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flyapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag    'aircrafts', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'aircrafts', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <img class="logo" src="/logos/logo.png">
+        </div>
+        <div class="header-center">
+            <a href="#">NEWS</a>
+            <a href="#">AIRLINE</a>
+            <a href="#">AIRPORT</a>
+            <a href="#">AIRCRAFT</a>
+        </div>
+        <div class="header-right">
+            <a href="#">新規登録</a>
+            <a href="#" class="login">ログイン</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="photos-wrapper">
+      <div class="container">
+        <div class="photos">
+          <h1>Photos</h1>
+          <div class="photo">
+            <img class="photo" src="/images/aircraft/1.jpg">
+            <div class="photo-data">
+              <p class="photo-contents">空港 : NRT/RJAA</p>
+              <p class="photo-contents">航空会社 : SU/AFL</p>
+              <p class="photo-contents">機材 : B777</p>
+              <p class="photo-contents">撮影日時 : 2016/02/15</p>
+              <p class="photo-contents">投稿者 : すずきさん</p>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <img src="/logos/footer_logo.png">
+        <p>let's join aviation community</p>
+      </div>
+    </footer>
+  </body>
+</html>
