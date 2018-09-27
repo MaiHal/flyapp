@@ -136,7 +136,7 @@ header {
 .photos-wrapper {
   width: 100%;
   padding-top: 80px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   padding-left: 5%;
   padding-right: 5%;
   background-image: url(quantus.jpg);
@@ -165,14 +165,16 @@ header {
 
 .photo {
   float: left;
+  border-radius: 4px;
   width: 20%;
   margin: 0px 22px 0 22px;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
 .photo img {
-  margin: 15px 34px;
+  margin: 24px 24px;
   text-align: center;
+  width: 145px;
 }
 
 .photo-data {
@@ -202,6 +204,49 @@ header {
   text-align: center;
   color: #5f5d60;
   position: relative;
+}
+
+.reports {
+  padding: 80px 5px 20px 20px;
+  text-align: left;
+  color: #5f5d60;
+  position: relative;
+}
+
+.reports h1 {
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #fff;
+  padding-right: 30px;
+  font-weight: normal;
+  position: absolute;
+  margin: 0;
+  top: 0px;
+}
+
+.report {
+  float: left;
+  width: 25%;
+  margin: 0px 32px 0 32px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+}
+
+.report img {
+  margin: 30px 30px 10px 30px;
+  text-align: center;
+  width: 180px;
+}
+
+.report-data {
+  margin-bottom: 10px;
+}
+
+.report-contents {
+  padding-left: 20px;
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 13px;
 }
 
 .news-wrapper {
