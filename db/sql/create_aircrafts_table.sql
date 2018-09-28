@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS "aircrafts"("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "file_name" string NOT NULL,"airline_id" integer DEFAULT NULL,"aircraft_type" string DEFAULT NULL,"airport_id" integer DEFAULT NULL,"taken_at" datetime DEFAULT NULL, "camera_model" string DEFAULT NULL, "user_id" integer NOT NULL, "posted_at" datetime DEFAULT(CURRENT_TIMESTAMP) NOT NULL);
