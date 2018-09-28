@@ -23,5 +23,7 @@ test:
 production:
   <<: *default
   adapter: postgresql
+  database: flyfe
   encoding: unicode
+  url: <%= ENV['postgres://wnezgxznkjvhey:af66034abe33c1bca0153c512ef391414a1082a442f42d2a4c2169b8cd6e459b@ec2-54-225-76-201.compute-1.amazonaws.com:5432/d6tr836b1efft7'] %>
   pool: 5
