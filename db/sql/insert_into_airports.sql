@@ -3,3 +3,5 @@ insert into airports (name, cord) values
 	("函館空港", "HKD/RJCH"),
 	("台湾桃園国際空港", "TPE/RCTP"),
 	("香港国際空港", "HKG/VHHH");
+
+	air = Airport.new(name:"香港国際空港", cord:"HKG/VHHH")
