@@ -33,19 +33,20 @@
       <div class="container">
         <div class="photos">
           <h1>Photos</h1>
-          <% @aircrafts.each do |aircraft| %>
-            <div class="photo">
-              <img class="photo" src="<%= "/images/aircraft/#{aircraft.file_name}" %>">
-             
-              <div class="photo-data">
-                <p class="photo-contents">空港 : <%= aircraft.airport %></p>
-                <p class="photo-contents">航空会社 : <%= aircraft.airline %></p>
-                <p class="photo-contents">機材 : <%= aircraft.aircraft_type %></p>
-                <p class="photo-contents">撮影日時 : <%= aircraft.taken_at %></p>
-                <p class="photo-contents">投稿者 : すずきさん</p>
+            <% @aircrafts.each do |aircraft| %>
+              <div class="photo">
+                <img class="photo" src="<%= "/images/aircraft/#{aircraft.file_name}" %>">
+                <div class="photo-data">
+                  <p class="photo-contents">空港 : <%= aircraft.airport_id %></p>
+                  <p class="photo-contents">航空会社 : <%= aircraft.airline_id %></p>
+                  <p class="photo-contents">機材 : <%= aircraft.aircraft_type %></p>
+                  <p class="photo-contents">投稿者 : すずきさん</p>
+                </div>
               </div>
-            </div>
-          <% end %>
+              <% if aircraft.id%4 == 0 %>
+                <br>
+              <% end %>
+            <% end %>
           <div class="clear"></div>
         </div>
         </div>

@@ -18,6 +18,46 @@ header {
   z-index: 10;
 }
 
+.photos {
+  padding: 80px 5px 20px 20px;
+  text-align: left;
+  color: #5f5d60;
+  position: relative;
+  width: 100%;
+}
+
+.photo {
+  float: left;
+  border-radius: 4px;
+  width: 17.6%;
+  margin: 10px 22px 10px 22px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.photo-data {
+  margin-bottom: 5px;
+  line-height: 15px;
+}
+
+.photo img {
+  margin: 10px 12px;
+  text-align: center;
+  width: 145px;
+  height:90px;
+}
+
+.photo-contents {
+  padding-left: 20px;
+  width: 80%;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.photo-contents p {
+}
 
 footer img {
   width: 125px;
