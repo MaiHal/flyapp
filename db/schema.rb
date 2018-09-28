@@ -10,15 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_151408) do
+ActiveRecord::Schema.define(version: 2018_09_28_155141) do
 
-# Could not dump table "aircrafts" because of following StandardError
-#   Unknown type 'string' for column 'file_name'
+  create_table "aircrafts", force: :cascade do |t|
+    t.string "file_name"
+    t.integer "airline_id"
+    t.string "aircraft_type"
+    t.integer "airport_id"
+    t.string "camera_model"
+    t.integer "user_id"
+    t.datetime "taken_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
-# Could not dump table "airlines" because of following StandardError
-#   Unknown type 'string' for column 'name'
+  create_table "airlines", force: :cascade do |t|
+    t.string "name"
+    t.string "cord"
+  end
 
-# Could not dump table "airports" because of following StandardError
-#   Unknown type 'string' for column 'name'
+  create_table "airports", force: :cascade do |t|
+    t.string "name"
+    t.string "cord"
+  end
 
 end

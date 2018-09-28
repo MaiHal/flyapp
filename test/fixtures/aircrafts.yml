@@ -1,7 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  aircrafts: MyString
+  file_name: MyString
+  airline_id: 1
+  aircraft_type: MyString
+  airport_id: 1
+  camera_model: MyString
+  user_id: 1
+  taken_at: 2018-09-28 19:22:35
 
 two:
-  aircrafts: MyString
+  file_name: MyString
+  airline_id: 1
+  aircraft_type: MyString
+  airport_id: 1
+  camera_model: MyString
+  user_id: 1
+  taken_at: 2018-09-28 19:22:35

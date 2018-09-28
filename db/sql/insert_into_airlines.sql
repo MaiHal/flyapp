@@ -8,3 +8,5 @@ insert into airlines (name, cord) values
 	("エア・レジャー", "AL"),
 	("ピーチ", "MM/APJ"),
 	("アリタリア航空", "AZ/AZA");
+
+	air = Aircraft.new(name:"アエロフロート・ロシア航空", cord:0)
