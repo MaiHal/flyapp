@@ -12,15 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2018_09_27_151408) do
 
-  create_table "aircrafts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "airline"
-    t.string "type"
-    t.string "airport"
-    t.datetime "taken_at"
-    t.string "camera_model"
-    t.integer "user_id"
-  end
+# Could not dump table "aircrafts" because of following StandardError
+#   Unknown type 'string' for column 'file_name'
+
+# Could not dump table "airlines" because of following StandardError
+#   Unknown type 'string' for column 'name'
+
+# Could not dump table "airports" because of following StandardError
+#   Unknown type 'string' for column 'name'
 
 end

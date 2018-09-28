@@ -37,7 +37,7 @@
               <div class="photo">
                 <img class="photo" src="<%= "/images/aircraft/#{aircraft.file_name}" %>">
                 <div class="photo-data">
-                  <p class="photo-contents">空港 : <%= aircraft.airport_id %></p>
+                  <p class="photo-contents">空港 : <%= @airports.find_by(id: aircraft.airport_id)[:cord] %></p>
                   <p class="photo-contents">航空会社 : <%= @airlines.find_by(id: aircraft.airline_id)[:cord] %></p>
                   <p class="photo-contents">機材 : <%= aircraft.aircraft_type %></p>
                   <p class="photo-contents">投稿者 : <%= aircraft.user_id %></p>
