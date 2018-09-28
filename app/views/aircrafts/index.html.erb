@@ -40,7 +40,7 @@
                   <p class="photo-contents">空港 : <%= aircraft.airport_id %></p>
                   <p class="photo-contents">航空会社 : <%= aircraft.airline_id %></p>
                   <p class="photo-contents">機材 : <%= aircraft.aircraft_type %></p>
-                  <p class="photo-contents">投稿者 : すずきさん</p>
+                  <p class="photo-contents">投稿者 : <%= aircraft.user_id %></p>
                 </div>
               </div>
               <% if aircraft.id%4 == 0 %>
