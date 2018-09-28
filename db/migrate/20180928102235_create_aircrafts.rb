@@ -1,7 +1,6 @@
 class CreateAircrafts < ActiveRecord::Migration[5.2]
   def change
-    create_table :aircrafts, :id=>false do |t|
-      t.column :id, 'INTEGER PRIMARY KEY AUTOINCREMENT'
+    create_table :aircrafts do |t|
       t.string :file_name
       t.integer :airline_id
       t.string :aircraft_type
