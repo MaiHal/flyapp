@@ -3,10 +3,9 @@ class CreateReports < ActiveRecord::Migration[5.2]
     create_table :reports do |t|
       t.string :file_name
       t.integer :airline_id
-      t.string :aircraft_type
-      t.string :route
+      t.string :starting_point
+      t.string :arrival_point
       t.integer :user_id
-      t.datetime :taken_at
 
       t.timestamps
     end

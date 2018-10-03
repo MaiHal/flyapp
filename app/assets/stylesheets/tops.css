@@ -38,7 +38,7 @@ header {
 .header-center {
   float:left;
   position: relative;
-  left: 15%;
+  left: 20%;
 
 }
 
@@ -195,7 +195,7 @@ header {
 
 .repo-wrapper {
   width: 100%;
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 30px;
   padding-left: 5%;
   padding-right: 5%;

@@ -3,15 +3,13 @@
 one:
   file_name: MyString
   airline_id: 1
-  aircraft_type: MyString
-  route: MyString
+  starting_point: MyString
+  arrival_point: MyString
   user_id: 1
-  taken_at: 2018-09-29 02:13:09
 
 two:
   file_name: MyString
   airline_id: 1
-  aircraft_type: MyString
-  route: MyString
+  starting_point: MyString
+  arrival_point: MyString
   user_id: 1
-  taken_at: 2018-09-29 02:13:09
