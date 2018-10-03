@@ -33,26 +33,55 @@ header {
   position: relative;
 }
 
-.photo-detail {
-  width: 90%;
-  margin: 5% 5%;
+.table-style { 
+    border-collapse: collapse;
+    border: 1px solid #5f5d60; 
+    border-top-style:none;
+    border-bottom-style:none;
+    border-left-style:none;
 }
 
+.photo-wrapper h1 {
+  width: 60%;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  margin-bottom: 2%;
+  padding-left: 1%;
+  margin-left: 7%;
+}
+
+.photo-detail {
+  width: 90%;
+  margin: 0 5% 5% 5%;
+  padding-bottom: 5%;
+}
+
+.photo-detail-datas {
+  width: 100% ;
+  margin-left: 9%;
+  text-align: center;
+}
 .photo-detail-data {
   padding-top: 20px;
   margin-bottom: 10px;
   line-height: 15px;
+  float: left;
+  width: 80%;
 }
 
 .photo-detail img {
   width: 90%;
+  margin-top: 5%;
   text-align: center;
+  padding-bottom: 0;
 }
 
 .photo-content {
   padding-left: 20px;
   width: 80%;
   display: inline-block;
+  text-align: left;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 20px;
@@ -60,6 +89,7 @@ header {
 }
 
 .photo-content p {
+  width: 25%;
 }
 
 footer img {
