@@ -4,4 +4,8 @@ class AircraftsController < ApplicationController
 		@airlines = Airline.all
 		@airports = Airport.all
 	end
+
+	def show
+		@aircraft = Aircraft.find_by(id: params[:id])
+	end
 end
