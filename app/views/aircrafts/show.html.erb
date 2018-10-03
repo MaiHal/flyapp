@@ -7,8 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <%= stylesheet_link_tag    'aircrafts', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'aircrafts', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'aircraft_detail', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
   	<header>
@@ -28,11 +27,18 @@
         </div>
       </div>
     </header>
-    <div class="photos-wrapper">
-      <div class="container">
-        <div class="photos">
-          <h1>Show</h1>
-           
+    <div class="photo-wrapper">
+    	<h1>Aircraft</h1>
+        <div class="container">
+	        <div class="photo-detail">
+	        	<img class="photo-detail" src="<%= "/images/aircraft/#{@aircraft.file_name}" %>">
+	            <div class="photo-detail-data">
+	              <p class="photo-content">空港 : <%= @airport[:cord] %></p>
+	              <p class="photo-content">航空会社 : <%= @airline[:cord] %></p>
+	              <p class="photo-content">機材 : <%= @aircraft.aircraft_type %></p>
+	              <p class="photo-content">投稿者 : <%= @aircraft.user_id %></p>
+	            </div>
+	        </div>
         </div>
       </div>
     </div>

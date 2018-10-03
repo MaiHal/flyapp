@@ -21,56 +21,45 @@ header {
   z-index: 10;
 }
 
-.photos {
-  padding: 80px 5px 100px 20px;
-  text-align: left;
+.photo-wrapper {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-size: cover;
+  text-align: center;
   color: #5f5d60;
   position: relative;
-  width: 100%;
 }
 
-.photo {
-  float: left;
-  border-radius: 4px;
-  width: 17.6%;
-  margin: 10px 22px 10px 22px;
-  background-color: rgba(255, 255, 255, 0.9);
+.photo-detail {
+  width: 90%;
+  margin: 5% 5%;
 }
 
-.photo-data {
-  margin-bottom: 5px;
+.photo-detail-data {
+  padding-top: 20px;
+  margin-bottom: 10px;
   line-height: 15px;
 }
-.photo img {
-  margin: 10px 12px;
+
+.photo-detail img {
+  width: 90%;
   text-align: center;
-  width: 145px;
-  height:90px;
 }
 
-.photo-contents {
+.photo-content {
   padding-left: 20px;
   width: 80%;
   display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
-.photo-contents p {
-}
-
-.photo-detail {
-  width: 90%;
-  float: left;
-  border-radius: 4px;
-  margin: 10px 22px 10px 22px;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.photo-detail img {
-  width: 80%;
+.photo-content p {
 }
 
 footer img {
