@@ -33,6 +33,7 @@
         <div class="reports">
           <h1>Reports</h1>
             <% @reports.each do |report| %>
+              <a href="<%= "/report/#{report.id}" %>">
               <div class="report">
                 <img class="report" src="<%= "/images/reports/#{report.file_name}" %>">
                 <div class="report-data">
@@ -42,6 +43,7 @@
                   <p class="report-contents">投稿者 : <%= report.user_id %> </p>
                 </div>
               </div>
+              </a>
             <% end %>
           <div class="clear"></div>
         </div>
