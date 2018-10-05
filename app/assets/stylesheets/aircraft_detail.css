@@ -39,21 +39,33 @@ header {
     border-top-style:none;
     border-bottom-style:none;
     border-left-style:none;
+    padding-bottom: 30px;
+    width: 35%;
+}
+
+.table-style-right { 
+    border-collapse: collapse;
+    border-top-style:none;
+    border-bottom-style:none;
+    border-left-style:none;
+    padding-bottom: 30px;
+    width: 35%;
 }
 
 .photo-wrapper h1 {
   width: 60%;
-  color: rgba(255, 255, 255, 0.8);
+  color: #5f5d60;
   text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-  margin-bottom: 2%;
+  border-bottom: 1px solid #5f5d60;
+  margin-top: 5%;
+  margin-bottom: 0;
   padding-left: 1%;
   margin-left: 7%;
 }
 
 .photo-detail {
   width: 90%;
-  margin: 0 5% 5% 5%;
+  margin: 3% 5% 5% 5%;
   padding-bottom: 5%;
 }
 

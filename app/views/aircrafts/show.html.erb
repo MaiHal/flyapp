@@ -29,8 +29,8 @@
     </header>
     <div class="photo-wrapper">
         <div class="container">
-        	<h1><%= @airline[:name] %> <%= @aircraft.aircraft_type %> の写真</h1>
 	        <div class="photo-detail">
+            <h1><%= @airline[:name] %> <%= @aircraft.aircraft_type %> の写真</h1>
 	        	<img class="photo-detail" src="<%= "/images/aircraft/#{@aircraft.file_name}" %>">
 	        	<div class="photo-detail-datas">
 		            <div class="photo-detail-data">
@@ -44,27 +44,34 @@
 			              <p class="photo-content">airline</p>
 			              <p class="photo-content"><%= @airline[:name] %> <br><font size="2">( <%= @airline[:cord] %> )</font></p>
 			          	  </td class="table-style">
-			          	  <td>
+			          	  <td class="table-style-right">
 			          	  	<p class="photo-content">taken by</p>
 		              		<p class="photo-content"><%= @aircraft.user_id %>さん</p>
+                      <p class="photo-content"></p>
+                      <p class="photo-content"></p>
 			          	  </td>
-			          	</tr>
-			          	<tr>
-			          	  <td class="table-style">
-			          	  	<p class="photo-content">spot</p>
-		             		<p class="photo-content">さくらの山公園</p>
-			          	  </td>
-			          	  <td class="table-style">
-			          	  	<p class="photo-content">type</p>
-		              		<p class="photo-content"><%= @aircraft.aircraft_type %></p>
-			          	  </td>
-			          	  <td>
-			          	  	<p class="photo-content">taken date</p>
-		              		<p class="photo-content"><%= @aircraft.taken_at.year %>年</p>
-			          	  </td>
-			          	</tr>
+			          	  </tr>
+                    <tr>
+                      <td class="table-style-right">
+                        <p></p>
+                      </td>
+                    </tr>
+                    <tr>
+                    <td class="table-style">
+                      <p class="photo-content">spot</p>
+                    <p class="photo-content">さくらの山公園</p>
+                    </td>
+                    <td class="table-style">
+                      <p class="photo-content">type</p>
+                      <p class="photo-content"><%= @aircraft.aircraft_type %></p>
+                    </td>
+                    <td class="table-style-right">
+                      <p class="photo-content">taken date</p>
+                      <p class="photo-content"><%= @aircraft.taken_at.year %>年<%= @aircraft.taken_at.month %>月<%= @aircraft.taken_at.day %>日</p>
+                    </td>
+                  </tr>
 		              </table>
-		        </div>
+		            </div>
 	        </div>
         </div>
       </div>
