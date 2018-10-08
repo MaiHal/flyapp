@@ -30,7 +30,7 @@
     <div class="report-wrapper">
       <div class="container">
         <div class="report-detail">
-          <h1><%= "aaaaさん" %>の写真</h1>
+          <h1><%= @report[:user_id] %>さんのレポート</h1>
           <div class="report-detail-datas">
 	          <img class="report-detail" src="<%= "/images/reports/#{@report.file_name}" %>">
 	          <div class="report-detail-data">
