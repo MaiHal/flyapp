@@ -71,6 +71,7 @@ header {
   background-color: rgba(255, 255, 255, 0.9);
   padding-bottom: 3%;
   padding-left: 3%;
+  padding-right: 3%;  
   text-align: left;
 }
 
@@ -84,17 +85,17 @@ header {
 }
 
 .report-detail-datas {
+  display: inline-block;
   width: 100% ;
-  margin-left: 9%;
+  height: 30%;
   text-align: left;
 }
-.report-detail-data {
+.report-detail-data p {
   margin-top: 5%;
   margin-bottom: 5%;
   line-height: 30px;
   font-size: 20px;
-  width: 42%;
-  height: 260px;
+  width: 42%; 
   float: left;
 }
 
@@ -103,8 +104,7 @@ header {
   margin-top: 5%;
   margin-left: 5%;
   text-align: center;
-  padding-bottom: 0;
-  padding-left: 0;
+  padding: 0;
   float: left;
 }
 
