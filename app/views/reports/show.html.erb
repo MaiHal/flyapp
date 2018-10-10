@@ -34,24 +34,24 @@
           <div class="report-detail-datas">
 	          <img class="report-detail" src="<%= "/images/reports/#{@report.file_name}" %>">
 	          <div class="report-detail-data">
-	            <p>エバー航空に搭乗しました！
-              機内食がにんじんづくしでした。</p>
+	            <p><%= @report[:comment] %></p>
             </div>
           </div>
+          <%= %>
           <div class="tag">
-            <img src="/materials/tag.png">
+            <img src="/materials/tags.png">
             <p>エバー航空</p>
           </div>
           <div class="tag">
-            <img src="/materials/tag.png">
+            <img src="/materials/tags.png">
             <p>台北</p>
           </div>
           <div class="tag">
-            <img src="/materials/tag.png">
+            <img src="/materials/tags.png">
             <p>桃園</p>
           </div>
           <div class="tag">
-            <img src="/materials/tag.png">
+            <img src="/materials/tags.png">
             <p>桃園</p>
           </div>
           <div style="clear: both"></div>
