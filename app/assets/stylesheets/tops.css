@@ -153,6 +153,11 @@ header {
   position: relative;
 }
 
+.photos a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .photos h1 {
   color: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid #fff;
@@ -211,6 +216,11 @@ header {
   text-align: left;
   color: #5f5d60;
   position: relative;
+}
+
+.reports a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .reports h1 {

@@ -1,0 +1,122 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333; 
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: "Copperplate";
+  z-index: 10;
+}
+
+.photo-wrapper {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-size: cover;
+  text-align: center;
+  color: #5f5d60;
+  position: relative;
+}
+
+.table-style { 
+    border-collapse: collapse;
+    border: 1px solid #5f5d60; 
+    border-top-style:none;
+    border-bottom-style:none;
+    border-left-style:none;
+    padding-bottom: 30px;
+    width: 35%;
+}
+
+.table-style-right { 
+    border-collapse: collapse;
+    border-top-style:none;
+    border-bottom-style:none;
+    border-left-style:none;
+    padding-bottom: 30px;
+    width: 35%;
+}
+
+.photo-wrapper h1 {
+  width: 60%;
+  color: #5f5d60;
+  text-align: left;
+  border-bottom: 1px solid #5f5d60;
+  margin-top: 5%;
+  margin-bottom: 0;
+  padding-left: 1%;
+  margin-left: 7%;
+}
+
+.photo-detail {
+  width: 90%;
+  margin: 3% 5% 5% 5%;
+  padding-bottom: 5%;
+}
+
+.photo-detail-datas {
+  width: 100% ;
+  margin-left: 9%;
+  text-align: center;
+}
+.photo-detail-data {
+  padding-top: 20px;
+  margin-bottom: 10px;
+  line-height: 15px;
+  float: left;
+  width: 80%;
+}
+
+.photo-detail img {
+  width: 90%;
+  margin-top: 5%;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.photo-content {
+  padding-left: 20px;
+  width: 80%;
+  display: inline-block;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.photo-content p {
+  width: 25%;
+}
+
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  width: 100%;
+  left: 0;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+}
