@@ -7,5 +7,6 @@ class ReportsController < ApplicationController
 	def show
 		@report = Report.find_by(id: params[:id])
 		@airline = Airline.find_by(id: @report.airline_id)
+		@airports = Airport.all
 	end
 end

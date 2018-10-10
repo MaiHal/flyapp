@@ -40,19 +40,23 @@
           <%= %>
           <div class="tag">
             <img src="/materials/tags.png">
-            <p>エバー航空</p>
+            <p><%= @airline[:name] %></p>
           </div>
           <div class="tag">
             <img src="/materials/tags.png">
-            <p>台北</p>
+            <p><%= @report[:starting_point] %> - <%= @report[:arrival_point] %></p>
           </div>
           <div class="tag">
             <img src="/materials/tags.png">
-            <p>桃園</p>
+            <p><%= @airports.find_by(id: @report[:starting_airport_id])[:name] %></p>
           </div>
           <div class="tag">
             <img src="/materials/tags.png">
-            <p>桃園</p>
+            <p><%= @airports.find_by(id: @report[:arriving_airport_id])[:name] %></p>
+          </div>
+          <div class="tag">
+            <img src="/materials/tags.png">
+            <p><%= @report[:departure_date].year %>/<%= @report[:departure_date].month %>/<%= @report[:departure_date].day %></p>
           </div>
           <div style="clear: both"></div>
         </div>
