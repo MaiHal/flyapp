@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 			flash[:notice] = "会員登録完了"
 			redirect_to("/")
 		else
-			reder("signup")
+			render("users/new")
 		end
 	end
 

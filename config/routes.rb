@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get "/reports" => "reports#index"
   get "/report/:id" => "reports#show"
   get "/signup" => "users#new"
-  post "/signup" => "users#create"
+  post "/users/create" => "users#create"
 end
