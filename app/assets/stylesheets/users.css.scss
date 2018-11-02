@@ -1,0 +1,95 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333; 
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: "Copperplate";
+  z-index: 10;
+}
+
+.user-wrapper {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: url(/images/background/thai.jpg);
+  background-size: cover;
+  text-align: center;
+  color: #5f5d60;
+  position: relative;
+}
+
+.reports {
+  padding: 80px 5px 100px 20px;
+  text-align: left;
+  color: #5f5d60;
+  position: relative;
+  width: 100%;
+}
+
+.reports a {
+  color: #5f5d60;
+  text-decoration: none;
+}
+
+.report {
+  float: left;
+  border-radius: 4px;
+  width: 22%;
+  margin: 10px 22px 10px 22px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.report-data {
+  margin-bottom: 5px;
+  line-height: 15px;
+}
+
+.report img {
+  margin: 10px 30px;
+  text-align: center;
+  width: 145px;
+  height:90px;
+}
+
+.report-contents {
+  padding-left: 20px;
+  width: 80%;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  width: 100%;
+  left: 0;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+}

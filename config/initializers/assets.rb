@@ -21,4 +21,5 @@ Rails.application.config.assets.precompile += %w( aircraft_detail.js )
 Rails.application.config.assets.precompile += %w( reports.css )
 Rails.application.config.assets.precompile += %w( reports.js )
 Rails.application.config.assets.precompile += %w( report_detail.css )
+Rails.application.config.assets.precompile += %w( users.css )
 
