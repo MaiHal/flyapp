@@ -22,8 +22,12 @@
             <a href="/aircrafts">AIRCRAFT</a>
         </div>
         <div class="header-right">
-            <a href="/signup">新規登録</a>
-            <a href="#" class="login">ログイン</a>
+            <% if session[:user_id] == nil %>
+              <a href="/signup">新規登録</a>
+              <a href="#" class="login">ログイン</a>
+            <% else %>
+              <a href="/user/<%= "#{session[:user_id]}" %>">マイページ</a>
+            <% end %>
         </div>
       </div>
     </header>
