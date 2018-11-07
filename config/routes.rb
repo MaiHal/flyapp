@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "/signup" => "users#new"
   post "/users/create" => "users#create"
   get "user/:id" => "users#detail"
+  post "user/logout" => "users#logout"
 end
