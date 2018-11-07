@@ -24,10 +24,10 @@
         <div class="header-right">
             <% if session[:user_id] == nil %>
               <a href="/signup">新規登録</a>
-              <a href="/login" class="login">ログイン</a>
+              <a href="#" class="login">ログイン</a>
             <% else %>
               <a href="/user/<%= "#{session[:user_id]}" %>">マイページ</a>
-              <%= link_to("ログアウト", "/logout", {method: :post}) %>
+              <%= link_to("ログアウト", "logout", {method: :post}) %>
             <% end %>
         </div>
       </div>
@@ -36,17 +36,20 @@
     <div class="user-wrapper">
       <div class="container">
         <div class="reports">
-          <h1><%= @user.name %>さんのプロフィール</h1>
-          <% if @user.icon == nil %>
-            <div class="icon">
-              <img src="/images/user/icon/default_icon.png">
-            </div>
-          <% else %>
-            <div class="icon">
-              <img src="/images/user/icon/<%= "#{@user.icon}" %>">
-            </div>
-          <% end %>
-          メールアドレス: <%= @user.email %>
+            <h1>Log in</h1>
+            <%= form_tag(url: login_path, method: :post) do %>
+            <p>
+            <%= label_tag :email, "メールアドレス" %><br>
+            <%= email_field_tag :email %>
+            </p>
+            <br>
+            <p>
+            <%= label_tag :password, "パスワード" %><br>
+            <%= password_field_tag :password %>
+            </p>
+            <br>
+            <%= submit_tag "ログイン" %>
+            <% end %>
         </div>
       </div>
     </div>

@@ -18,6 +18,20 @@ class UsersController < ApplicationController
 		@user = User.find_by(id: params[:id])
 	end
 
+	def login_form
+		@user = User.find_by(id: session[:user_id])
+	end
+
+	def login
+		@user = User.find_by(email: params[:email])
+		if @user && @user.authenticate(params[:password])
+			session[:user_id] = @user.id
+			redirect_to("/user/#{@user.id}")
+		else
+			render("users/login_form")
+		end
+	end
+
 	def logout
 		session[:user_id] = nil
 		redirect_to("/")
