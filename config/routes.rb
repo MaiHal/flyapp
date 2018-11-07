@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "/report/:id" => "reports#show"
   get "/signup" => "users#new"
   post "/users/create" => "users#create"
+  get "user/:id" => "users#detail"
 end

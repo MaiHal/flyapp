@@ -8,10 +8,14 @@ class UsersController < ApplicationController
 		if @user.save
 			session[:user_id] = @user.id
 			flash[:notice] = "会員登録完了"
-			redirect_to("/")
+			redirect_to("/user/#{session[:user_id]}")
 		else
 			render("users/new")
 		end
+	end
+
+	def detail
+		@user = User.find_by(id: params[:id])
 	end
 
 	def users_params
