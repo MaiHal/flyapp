@@ -18,6 +18,11 @@ class UsersController < ApplicationController
 		@user = User.find_by(id: params[:id])
 	end
 
+	def logout
+		session[:user_id] = nil
+		redirect_to("/")
+	end
+
 	def users_params
 		params.require(:user).permit(:name, :email, :password)
 	end
