@@ -27,6 +27,7 @@
               <a href="#" class="login">ログイン</a>
             <% else %>
               <a href="/user/<%= "#{session[:user_id]}" %>">マイページ</a>
+              <a href="#">ログアウト</a>
             <% end %>
         </div>
       </div>
