@@ -28,6 +28,8 @@ class UsersController < ApplicationController
 			session[:user_id] = @user.id
 			redirect_to("/user/#{@user.id}")
 		else
+			@email = params[:email]
+			@password = params[:password]
 			render("users/login_form")
 		end
 	end

@@ -40,12 +40,12 @@
             <%= form_tag(url: login_path, method: :post) do %>
             <p>
             <%= label_tag :email, "メールアドレス" %><br>
-            <%= email_field_tag :email %>
+            <%= email_field_tag :email, @email %>
             </p>
             <br>
             <p>
             <%= label_tag :password, "パスワード" %><br>
-            <%= password_field_tag :password %>
+            <%= password_field_tag :password, @password %>
             </p>
             <br>
             <%= submit_tag "ログイン" %>
