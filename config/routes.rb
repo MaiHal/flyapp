@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {
+    :registrations => 'users/registrations',
+    :sessions => 'users/sessions'   
+  } 
+
+  devise_scope :user do
+    get "login", :to => "users/sessions#new"
+    get "logout", :to => "users/sessions#destroy" 
+  end
+
   get "/" => "tops#index"
   get "/aircrafts" => "aircrafts#index"
   get "/aircraft/:id" => "aircrafts#show"
