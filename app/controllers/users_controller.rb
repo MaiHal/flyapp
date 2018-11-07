@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 	end
 
 	def detail
+		@user = User.find_by(id: params[:id])
 	end
 
 	def users_params
