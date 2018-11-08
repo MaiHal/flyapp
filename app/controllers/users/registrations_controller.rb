@@ -38,6 +38,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
+  def detail
+		@user = User.find_by(id: params[:id])
+  end
+
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.
