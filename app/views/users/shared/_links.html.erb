@@ -9,7 +9,8 @@
   <%= javascript_include_tag 'tops', 'data-turbolinks-track': 'reload' %>
 </head>
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", login_path %><br />
+  <div class= "btn signup"><%= link_to "すでにアカウントをお持ちの方", login_path %></div><br />
+  <br>
 <% end -%>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
@@ -18,7 +19,9 @@
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "新規登録", signup_path %><br />
+  <%= link_to signup_path do %>
+    <div class= "btn signup">新規登録</div><br />
+  <% end %>
   <br>
 <% end -%>
 
@@ -33,7 +36,9 @@
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
     <%= link_to omniauth_authorize_path(resource_name, provider) do %>
-      <div class= "btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</div>
+      <div class= "btn facebook"><span class="fa fa-facebook"></span>Facebookでログイン</div><br />
     <% end %>
   <% end -%>
+  <br>
+  <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterでログイン</a>
 <% end -%>
