@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Users::RegistrationsController < Devise::RegistrationsController
+class Users::RegistrationsController < Devise::RegistrationsController  
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -58,6 +58,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def after_sign_up_path_for(resource)
     "/user/#{current_user.id}"
   end
+
+  def search
+		@user = search_user
+	end
+
+	def search_user
+		agent = Mechanize.new
+		res = agent.get('https://graph.facebook.com/v3.2/me?fields=id,name&access_token=aaaaalslssD')
+		results = JSON.parse(res.body.force_encoding('UTF-8'))
+		return results
+	end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)

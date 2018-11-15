@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get "signup", :to => "users/registrations#new"
     get "login", :to => "users/sessions#new"
     get "logout", :to => "users/sessions#destroy"
+    get "facebookapi", :to => "users/registrations#search"
   end
 
   get "/" => "tops#index"
