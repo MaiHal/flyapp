@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.1'
 
 gem 'bcrypt'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 gem 'sqlite3', group: :development
 gem 'pg', group: :production
