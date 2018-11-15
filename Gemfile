@@ -11,6 +11,7 @@ gem 'bcrypt'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'mechanize'
 
 gem 'sqlite3', group: :development
 gem 'pg', group: :production
