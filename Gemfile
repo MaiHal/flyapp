@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 
 gem 'bcrypt'
+gem 'devise'
 
 gem 'sqlite3', group: :development
 gem 'pg', group: :production

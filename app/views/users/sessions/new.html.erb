@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <%= stylesheet_link_tag    'users', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'users', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <header>
@@ -22,8 +22,13 @@
             <a href="/aircrafts">AIRCRAFT</a>
         </div>
         <div class="header-right">
+          <% if !user_signed_in? %>
             <a href="/signup">新規登録</a>
             <a href="/login" class="login">ログイン</a>
+          <% else %>
+            <%= link_to("マイページ", "/user/#{current_user.id}") %>
+            <%= link_to "ログアウト", logout_path %>
+          <% end %>
         </div>
       </div>
     </header>
@@ -31,29 +36,33 @@
     <div class="user-wrapper">
       <div class="container">
         <div class="reports">
-          <h1>Sign up</h1>
-          <%= form_for(@user, url: users_create_path, method: :post) do |f| %>
+          <h1>Log in</h1>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <p>
-            <%= f.label :name, "アカウント名" %><br>
-            <%= f.text_field :name %>
+              <%= f.label :email, "メールアドレス" %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
             </p>
             <br>
             <p>
-            <%= f.label :email, "メールアドレス" %><br>
-            <%= f.email_field :email %>
+              <%= f.label :password, "パスワード" %><br />
+              <%= f.password_field :password, autocomplete: "current-password" %>
             </p>
+            <% if devise_mapping.rememberable? -%>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me, "パスワードとメールアドレスを記憶する" %>
+              </div>
+            <% end -%>
             <br>
-            <p>
-            <%= f.label :password, "パスワード" %><br>
-            <%= f.password_field :password %>
-            </p>
-            <br>
-            <%= f.submit "登録する" %>
+            <div class="actions">
+              <%= f.submit "ログイン" %>
+            </div>
           <% end %>
+          <br>
+          <%= render "users/shared/links" %>
         </div>
       </div>
     </div>
-
     <footer>
       <div class="container">
         <img src="/logos/footer_logo.png">

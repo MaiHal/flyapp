@@ -32,24 +32,38 @@
       <div class="container">
         <div class="reports">
           <h1>Sign up</h1>
-          <%= form_for(@user, url: users_create_path, method: :post) do |f| %>
-            <p>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div class="field">
             <%= f.label :name, "アカウント名" %><br>
             <%= f.text_field :name %>
-            </p>
+            </div>
             <br>
-            <p>
-            <%= f.label :email, "メールアドレス" %><br>
-            <%= f.email_field :email %>
-            </p>
+            <div class="field">
+              <%= f.label :email, "メールアドレス" %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
             <br>
-            <p>
-            <%= f.label :password, "パスワード" %><br>
-            <%= f.password_field :password %>
-            </p>
+            <div class="field">
+              <%= f.label :password, "パスワード" %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> 文字以上)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "new-password" %>
+            </div>
             <br>
-            <%= f.submit "登録する" %>
+            <div class="field">
+              <%= f.label :password_confirmation, "パスワード (確認用)" %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+            </div>
+            <br>
+            <div class="actions">
+              <%= f.submit "登録する" %>
+            </div>
           <% end %>
+          <br>
+          <%= render "users/shared/links" %>
         </div>
       </div>
     </div>

@@ -23,12 +23,12 @@
             <a href="#">USERS</a>
         </div>
         <div class="header-right">
-          <% if session[:user_id] == nil %>
+          <% if !user_signed_in? %>
             <a href="/signup">新規登録</a>
             <a href="/login" class="login">ログイン</a>
           <% else %>
-            <a href="/user/<%= "#{session[:user_id]}" %>">マイページ</a>
-            <%= link_to("ログアウト", "logout", {method: :post}) %>
+            <%= link_to("マイページ", "/user/#{current_user.id}") %>
+            <%= link_to "ログアウト", logout_path %>
           <% end %>
         </div>
       </div>
@@ -42,7 +42,7 @@
         <p>FLYFEは飛行機ファンのみなさまのコミュニティ作りを支援するサービスです。</p>
         <p>搭乗レポートや機体の写真をシェアしてみましょう！</p>
         <div class="btn-wrapper">
-          <a href="#" class="btn signup">新規登録はこちら</a>
+          <a href="/users/sign_up" class="btn signup">新規登録はこちら</a>
           <p>or</p>
           <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
           <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
