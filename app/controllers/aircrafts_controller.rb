@@ -10,4 +10,18 @@ class AircraftsController < ApplicationController
 		@airline = Airline.find_by(id: @aircraft.airline_id)
 		@airport = Airport.find_by(id: @aircraft.airport_id)
 	end
+
+	def new
+		@aircraft = Aircraft.new
+	end
+
+	def create
+		@aircraft = Aircraft.new(users_params)
+		if @aircraft.save
+			flash[:notice] = "会員登録完了"
+			redirect_to("/aircrafts")
+		else
+			render("aircrafts/new")
+		end
+	end
 end
