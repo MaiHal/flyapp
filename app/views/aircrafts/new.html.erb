@@ -33,6 +33,36 @@
       <div class="container">
         <div class="photos">
           <h1>新規投稿</h1>
+          <%= form_for(@aircraft, url: aircrafts_create_path, method: :post) do |f| %>
+            <p>
+            <%= f.label :file_name, "ファイル名" %><br>
+            <%= f.file_field :file_name %>
+            </p>
+            <br>
+            <p>
+            <%= f.label :airline_id, "航空会社ID" %><br>
+            <%= f.number_field :airline_id %>
+            </p>
+            <br>
+            <p>
+            <%= f.label :aircraft_type, "機体タイプ" %><br>
+            <%= f.text_field :aircraft_type %>
+            </p>
+            <p>
+            <%= f.label :airport_id, "撮影空港" %><br>
+            <%= f.number_field :airport_id %>
+            </p>
+            <p>
+            <%= f.label :camera_model, "撮影機材" %><br>
+            <%= f.text_field :camera_model %>
+            </p>
+            <p>
+            <%= f.label :taken_at, "撮影日時" %><br>
+            <%= f.date_field :taken_at %>
+            </p>
+            <br>
+            <%= f.submit "登録する" %>
+          <% end %>
         </div>
       </div>
     </div>

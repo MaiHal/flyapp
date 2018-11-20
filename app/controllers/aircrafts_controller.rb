@@ -16,12 +16,16 @@ class AircraftsController < ApplicationController
 	end
 
 	def create
-		@aircraft = Aircraft.new(users_params)
+		@aircraft = Aircraft.new(aircrafts_params)
 		if @aircraft.save
 			flash[:notice] = "会員登録完了"
 			redirect_to("/aircrafts")
 		else
 			render("aircrafts/new")
 		end
+	end
+
+	def aircrafts_params
+		params.require(:aircraft).permit(:name, :email, :password)
 	end
 end
