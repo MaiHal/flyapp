@@ -56,6 +56,7 @@
             <%= f.label :camera_model, "撮影機材" %><br>
             <%= f.text_field :camera_model %>
             </p>
+            <%= f.hidden_field :user_id, :value => @user.id %>
             <p>
             <%= f.label :taken_at, "撮影日時" %><br>
             <%= f.date_field :taken_at %>

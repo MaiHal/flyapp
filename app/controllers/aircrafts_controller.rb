@@ -13,6 +13,7 @@ class AircraftsController < ApplicationController
 
 	def new
 		@aircraft = Aircraft.new
+		@user = User.find_by(id: current_user.id)
 	end
 
 	def create
@@ -26,6 +27,6 @@ class AircraftsController < ApplicationController
 	end
 
 	def aircrafts_params
-		params.require(:aircraft).permit(:name, :email, :password)
+		params.require(:aircraft).permit(:file_name, :airline_id, :aircraft_type, :airport_id, :camera_model, :user_id, :taken_at)
 	end
 end
