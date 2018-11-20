@@ -22,7 +22,7 @@ header {
 }
 
 .photos {
-  padding: 80px 5px 100px 20px;
+  padding: 80px 5px 0px 20px;
   text-align: left;
   color: #5f5d60;
   position: relative;
@@ -51,6 +51,38 @@ header {
   text-align: center;
   width: 145px;
   height:90px;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-wrapper p {
+  margin: 10px 0;
+}
+
+.btn-wrapper a {
+  color: white;
+}
+
+.signup {
+  background-color: #239b76;
+  color: white;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+  color:white;
 }
 
 .photo-contents {
