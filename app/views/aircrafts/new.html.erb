@@ -33,7 +33,7 @@
       <div class="container">
         <div class="photos">
           <h1>新規投稿</h1>
-          <%= form_for(@aircraft, url: aircrafts_create_path, method: :post) do |f| %>
+          <%= form_for(@aircraft, url: aircrafts_create_path, method: :post, multipart: true) do |f| %>
             <p>
             <%= f.label :file_name, "ファイル名" %><br>
             <%= f.file_field :file_name %>

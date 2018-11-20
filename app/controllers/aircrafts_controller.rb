@@ -18,6 +18,13 @@ class AircraftsController < ApplicationController
 
 	def create
 		@aircraft = Aircraft.new(aircrafts_params)
+		uploaded_file = aircrafts_params[:file_name]
+		@aircraft.file_name = uploaded_file.original_filename
+		output_path = Rails.root.join('public/images/aircraft', uploaded_file.original_filename)
+		File.open(output_path, 'w+b') do |fp|
+			fp.write  uploaded_file.read
+		end
+
 		if @aircraft.save
 			flash[:notice] = "会員登録完了"
 			redirect_to("/aircrafts")
