@@ -40,8 +40,8 @@
             </p>
             <br>
             <p>
-            <%= label_tag :airline_id, "航空会社ID" %><br>
-            <%= number_field_tag :airline_id %>
+            <%= label_tag :airline_name, "航空会社" %><br>
+            <%= text_field_tag :airline_name %>
             </p>
             <br>
             <p>
@@ -49,14 +49,14 @@
             <%= text_field_tag :aircraft_type %>
             </p>
             <p>
-            <%= label_tag :airport_id, "撮影空港" %><br>
-            <%= number_field_tag :airport_id %>
+            <%= label_tag :airport_name, "撮影空港" %><br>
+            <%= text_field_tag :airport_name %>
             </p>
             <p>
             <%= label_tag :camera_model, "撮影機材" %><br>
             <%= text_field_tag :camera_model %>
             </p>
-            <%= hidden_field_tag :user_id, :value => @user.id %>
+            <%= hidden_field_tag :user_id, @user.id %>
             <p>
             <%= label_tag :taken_at, "撮影日時" %><br>
             <%= date_field_tag :taken_at %>
