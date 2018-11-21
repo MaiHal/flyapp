@@ -9,6 +9,7 @@ class ReportsController < ApplicationController
 		@report = Report.find_by(id: params[:id])
 		@airline = Airline.find_by(id: @report.airline_id)
 		@airports = Airport.all
+		@user = User.find_by(id: @report.user_id)
 	end
 
 	def new
