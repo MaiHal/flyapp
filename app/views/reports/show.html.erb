@@ -30,7 +30,7 @@
     <div class="report-wrapper">
       <div class="container">
         <div class="report-detail">
-          <h1><%= @report[:user_id] %>さんのレポート</h1>
+          <h1><a href="<%= "/user/#{@user.id}"%>"><%= @user.name %></a>さんのレポート</h1>
           <div class="report-detail-datas">
 	          <img class="report-detail" src="<%= "/images/reports/#{@report.file_name}" %>">
 	          <div class="report-detail-data">
@@ -40,19 +40,29 @@
           <%= %>
           <div class="tag">
             <img src="/materials/tags.png">
-            <p><%= @airline[:name] %></p>
+            <p>
+              <% if @airline %>
+                <%= @airline[:name] %>
+              <% else %>
+                <%= @report.airline_name %>
+              <% end %>
+            </p>
           </div>
           <div class="tag">
             <img src="/materials/tags.png">
             <p><%= @report[:starting_point] %> - <%= @report[:arrival_point] %></p>
           </div>
           <div class="tag">
-            <img src="/materials/tags.png">
-            <p><%= @airports.find_by(id: @report[:starting_airport_id])[:name] %></p>
+            <% if @report[:starting_airport_id] %>
+              <img src="/materials/tags.png">
+              <p><%= @airports.find_by(id: @report[:starting_airport_id])[:name] %></p>
+            <% end %>
           </div>
           <div class="tag">
-            <img src="/materials/tags.png">
-            <p><%= @airports.find_by(id: @report[:arriving_airport_id])[:name] %></p>
+            <% if @report[:starting_airport_id] %>
+              <img src="/materials/tags.png">
+              <p><%= @airports.find_by(id: @report[:arriving_airport_id])[:name] %></p>
+            <% end %>
           </div>
           <div class="tag">
             <img src="/materials/tags.png">
