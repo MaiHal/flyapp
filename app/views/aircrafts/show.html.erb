@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag    'aircraft_detail', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'aircraft_detail', 'data-turbolinks-track': 'reload' %>
     </head>
   <body>
   	<header>
@@ -47,7 +46,7 @@
 			          	  </td class="table-style">
 			          	  <td class="table-style-right">
 			          	  	<p class="photo-content">taken by</p>
-		              		<p class="photo-content"><%= @aircraft.user_id %>さん</p>
+		              		<p class="photo-content"><%= @user.name %>さん</p>
                       <p class="photo-content"></p>
                       <p class="photo-content"></p>
 			          	  </td>

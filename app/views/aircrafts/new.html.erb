@@ -33,36 +33,36 @@
       <div class="container">
         <div class="photos">
           <h1>新規投稿</h1>
-          <%= form_for(@aircraft, url: aircrafts_create_path, method: :post, multipart: true) do |f| %>
+          <%= form_tag(aircrafts_create_path, method: :post, multipart: true) do %>
             <p>
-            <%= f.label :file_name, "ファイル名" %><br>
-            <%= f.file_field :file_name %>
+            <%= label_tag :file_name, "ファイル名" %><br>
+            <%= file_field_tag :file_name %>
             </p>
             <br>
             <p>
-            <%= f.label :airline_id, "航空会社ID" %><br>
-            <%= f.number_field :airline_id %>
+            <%= label_tag :airline_id, "航空会社ID" %><br>
+            <%= number_field_tag :airline_id %>
             </p>
             <br>
             <p>
-            <%= f.label :aircraft_type, "機体タイプ" %><br>
-            <%= f.text_field :aircraft_type %>
+            <%= label_tag :aircraft_type, "機体タイプ" %><br>
+            <%= text_field_tag :aircraft_type %>
             </p>
             <p>
-            <%= f.label :airport_id, "撮影空港" %><br>
-            <%= f.number_field :airport_id %>
+            <%= label_tag :airport_id, "撮影空港" %><br>
+            <%= number_field_tag :airport_id %>
             </p>
             <p>
-            <%= f.label :camera_model, "撮影機材" %><br>
-            <%= f.text_field :camera_model %>
+            <%= label_tag :camera_model, "撮影機材" %><br>
+            <%= text_field_tag :camera_model %>
             </p>
-            <%= f.hidden_field :user_id, :value => @user.id %>
+            <%= hidden_field_tag :user_id, :value => @user.id %>
             <p>
-            <%= f.label :taken_at, "撮影日時" %><br>
-            <%= f.date_field :taken_at %>
+            <%= label_tag :taken_at, "撮影日時" %><br>
+            <%= date_field_tag :taken_at %>
             </p>
             <br>
-            <%= f.submit "登録する" %>
+            <%= submit_tag "登録する" %>
           <% end %>
         </div>
       </div>
