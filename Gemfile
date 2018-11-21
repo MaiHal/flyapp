@@ -13,7 +13,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 gem 'sqlite3', group: :development
-gem 'pg', group: :production
+gem 'pg', '~> 0.19.0', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
