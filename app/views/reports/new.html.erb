@@ -33,9 +33,9 @@
       <div class="container">
         <div class="reports">
           <h1>新規投稿</h1>
-          <%= form_tag(aircrafts_create_path, method: :post, multipart: true) do %>
+          <%= form_tag(reports_create_path, method: :post, multipart: true) do %>
             <p>
-            <%= label_tag :file_name, "ファイル名" %><br>
+            <%= label_tag :file_name, "画像ファイル" %><br>
             <%= file_field_tag :file_name %>
             </p>
             <br>
@@ -45,24 +45,21 @@
             </p>
             <br>
             <p>
-            <%= label_tag :aircraft_type, "機体タイプ" %><br>
-            <%= text_field_tag :aircraft_type %>
-            </p>
-            <p>
-            <%= label_tag :airport_name, "撮影空港" %><br>
-            <%= text_field_tag :airport_name %>
-            </p>
-            <p>
-            <%= label_tag :camera_model, "撮影機材" %><br>
-            <%= text_field_tag :camera_model %>
+            <%= label_tag :route, "路線" %><br>
+            <%= text_field_tag :starting_point, '', :placeholder => "出発都市" %> から <%= text_field_tag :arrival_point, '', placeholder: '到着都市' %>
             </p>
             <%= hidden_field_tag :user_id, @user.id %>
             <p>
-            <%= label_tag :taken_at, "撮影日時" %><br>
-            <%= date_field_tag :taken_at %>
+            <%= label_tag :departure_date, "搭乗日時" %><br>
+            <%= date_field_tag :departure_date %>
             </p>
             <br>
-            <%= submit_tag "登録する" %>
+            <p>
+            <%= label_tag :comment, "コメント" %><br>
+            <%= text_area_tag :comment %>
+            </p>
+            <br>
+            <%= submit_tag "投稿する" %>
           <% end %>
         </div>
       </div>

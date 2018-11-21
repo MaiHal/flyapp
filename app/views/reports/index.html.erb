@@ -38,7 +38,12 @@
                 <img class="report" src="<%= "/images/reports/#{report.file_name}" %>">
                 <div class="report-data">
                   <p class="report-contents">搭乗日 : <%= report.departure_date.year %>年<%= report.departure_date.month %>月<%= report.departure_date.day %>日</p>
-                  <p class="report-contents">航空会社 : <%= @airlines.find_by(id: report.airline_id)[:cord] %></p>
+                  <p class="report-contents">航空会社 :
+                  <% if report.airline_id %>
+                    <%= @airlines.find_by(id: report  .airline_id)[:cord] %></p>
+                  <% else %>
+                    - </p>
+                  <% end %>
                   <p class="report-contents">路線 : <%= report.starting_point %>-<%= report.arrival_point %></p>
                   <p class="report-contents">投稿者 : <%= @users.find_by(id: report.user_id).name %> </p>
                 </div>

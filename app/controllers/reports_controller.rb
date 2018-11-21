@@ -1,4 +1,6 @@
 class ReportsController < ApplicationController
+	before_action :authenticate_user, {only: [:new, :create]}
+	
 	def index
 		@reports = Report.all.paginate(page: params[:page], per_page:8)
 		@airlines = Airline.all
@@ -35,6 +37,6 @@ class ReportsController < ApplicationController
 	end
 
 	def reports_params
-		params.permit(:file_name, :airline_name, :aircraft_type, :airport_name, :camera_model, :user_id, :taken_at)
+		params.permit(:file_name, :airline_name, :starting_point, :arrival_point, :user_id, :departure_date, :comment)
 	end
 end
