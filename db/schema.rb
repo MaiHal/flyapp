@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_21_072719) do
+ActiveRecord::Schema.define(version: 2018_11_21_163925) do
 
   create_table "aircrafts", force: :cascade do |t|
     t.string "file_name"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2018_11_21_072719) do
     t.text "comment"
     t.integer "starting_airport_id"
     t.integer "arriving_airport_id"
+    t.string "airline_name"
   end
 
   create_table "users", force: :cascade do |t|

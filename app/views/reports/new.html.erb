@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flyapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag 'reports', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <img class="logo" src="/logos/logo.png">
+        </div>
+        <div class="header-center">
+            <a href="/">TOP</a>
+            <a href="/reports">REPORT</a>
+            <a href="#">NEWS</a>
+            <a href="#">USERS</a>
+        </div>
+        <div class="header-right">
+            <a href="#">新規登録</a>
+            <a href="#" class="login">ログイン</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="repo-wrapper">
+      <div class="container">
+        <div class="reports">
+          <h1>新規投稿</h1>
+          <%= form_tag(reports_create_path, method: :post, multipart: true) do %>
+            <p>
+            <%= label_tag :file_name, "画像ファイル" %><br>
+            <%= file_field_tag :file_name %>
+            </p>
+            <br>
+            <p>
+            <%= label_tag :airline_name, "航空会社" %><br>
+            <%= text_field_tag :airline_name %>
+            </p>
+            <br>
+            <p>
+            <%= label_tag :route, "路線" %><br>
+            <%= text_field_tag :starting_point, '', :placeholder => "出発都市" %> から <%= text_field_tag :arrival_point, '', placeholder: '到着都市' %>
+            </p>
+            <%= hidden_field_tag :user_id, @user.id %>
+            <p>
+            <%= label_tag :departure_date, "搭乗日時" %><br>
+            <%= date_field_tag :departure_date %>
+            </p>
+            <br>
+            <p>
+            <%= label_tag :comment, "コメント" %><br>
+            <%= text_area_tag :comment %>
+            </p>
+            <br>
+            <%= submit_tag "投稿する" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <img src="/logos/footer_logo.png">
+        <p>let's join aviation community</p>
+      </div>
+    </footer>
+  </body>
+</html>
