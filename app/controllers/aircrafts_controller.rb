@@ -1,4 +1,6 @@
 class AircraftsController < ApplicationController
+	before_action :authenticate_user, {only: [:new, :create]}
+
 	def index
 		@aircrafts = Aircraft.all.paginate(page: params[:page], per_page: 8)
 		@airlines = Airline.all

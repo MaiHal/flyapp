@@ -10,4 +10,19 @@ class ApplicationController < ActionController::Base
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
     end
+
+    def authenticate_user
+        if current_user == nil
+            flash[:notice] = "ログインが必要です"
+            redirect_to("/login")
+        end
+    end
+
+    def forbid_login_user
+        if current_user
+            flash[:notice] = "ログイン済みです"
+            puts "ログイン済みです"
+            redirect_to("/")
+        end
+    end
 end
