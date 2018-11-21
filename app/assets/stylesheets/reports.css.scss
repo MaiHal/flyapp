@@ -64,6 +64,38 @@ header {
   line-height: 15px;
 }
 
+.btn-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-wrapper p {
+  margin: 10px 0;
+}
+
+.btn-wrapper a {
+  color: white;
+}
+
+.signup {
+  background-color: #239b76;
+  color: white;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+
 .photo-contents p {
 }
 
