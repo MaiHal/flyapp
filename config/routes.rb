@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get "/" => "tops#index"
   get "/aircrafts" => "aircrafts#index"
   get "/aircraft/:id" => "aircrafts#show"
+  get "/aircrafts/new" => "aircrafts#new"
+  post "/aircrafts/create" => "aircrafts#create"
   get "/reports" => "reports#index"
   get "/report/:id" => "reports#show"
 end

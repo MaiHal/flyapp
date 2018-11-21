@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag    'aircraft_detail', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'aircraft_detail', 'data-turbolinks-track': 'reload' %>
     </head>
   <body>
   	<header>
@@ -31,7 +30,14 @@
     <div class="photo-wrapper">
         <div class="container">
 	        <div class="photo-detail">
-            <h1><%= @airline[:name] %> <%= @aircraft.aircraft_type %> の写真</h1>
+            <h1>
+              <% if @airline %>
+                <%= @airline[:name] %>
+              <% else %>
+                <%= @aircraft.airline_name %>
+              <% end %>
+              の写真
+            </h1>
 	        	<img class="photo-detail" src="<%= "/images/aircraft/#{@aircraft.file_name}" %>">
 	        	<div class="photo-detail-datas">
 		            <div class="photo-detail-data">
@@ -39,15 +45,27 @@
 		              	<tr>
 			              <td class="table-style">
 			              <p class="photo-content">airport</p>
-			              <p class="photo-content"><%= @airport[:name] %> <br> <font size="2">( <%= @airport[:cord] %> )</font></p>
+                    <p class="photo-content">
+                      <% if @airport %>
+                        <%= @airport[:name] %> <br> <font size="2">( <%= @airport[:cord] %> )</font>
+                      <% else %>
+                        <%= @aircraft.airport_name %>
+                      <% end %>
+                    </p>
 			          	  </td>
 			          	  <td class="table-style">
 			              <p class="photo-content">airline</p>
-			              <p class="photo-content"><%= @airline[:name] %> <br><font size="2">( <%= @airline[:cord] %> )</font></p>
+                    <p class="photo-content">
+                      <% if @airline %>
+                        <%= @airline[:name] %> <br><font size="2">( <%= @airline[:cord] %> )</font>
+                      <% else %>
+                        <%= @aircraft.airline_name %>
+                      <% end %>
+                    </p>
 			          	  </td class="table-style">
 			          	  <td class="table-style-right">
 			          	  	<p class="photo-content">taken by</p>
-		              		<p class="photo-content"><%= @aircraft.user_id %>さん</p>
+		              		<p class="photo-content"><%= @user.name %>さん</p>
                       <p class="photo-content"></p>
                       <p class="photo-content"></p>
 			          	  </td>

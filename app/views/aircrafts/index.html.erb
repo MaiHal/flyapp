@@ -38,10 +38,20 @@
                 <div class="photo">
                   <img class="photo" src="<%= "/images/aircraft/#{aircraft.file_name}" %>">
                   <div class="photo-data">
-                    <p class="photo-contents">空港 : <%= @airports.find_by(id: aircraft.airport_id)[:cord] %></p>
-                    <p class="photo-contents">航空会社 : <%= @airlines.find_by(id: aircraft.airline_id)[:cord] %></p>
+                    <p class="photo-contents">空港 :
+                    <% if aircraft.airport_id %>
+                      <%= @airports.find_by(id: aircraft.airport_id)[:cord] %></p>
+                    <% else %>
+                      - </p>
+                    <% end %>
+                    <p class="photo-contents">航空会社 :
+                    <% if aircraft.airline_id %>
+                      <%= @airlines.find_by(id: aircraft.airline_id)[:cord] %></p>
+                    <% else %>
+                      - </p>
+                    <% end %>
                     <p class="photo-contents">機材 : <%= aircraft.aircraft_type %></p>
-                    <p class="photo-contents">投稿者 : <%= aircraft.user_id %></p>
+                    <p class="photo-contents">投稿者 : <%= @users.find_by(id: aircraft.user_id).name %></p>
                   </div>
                 </div>
               </a>
@@ -50,6 +60,9 @@
               <% end %>
             <% end %>
           <div class="clear"></div>
+          <div class="btn-wrapper">
+            <a href="/aircrafts/new" class="btn signup">新規投稿</a>
+          </div>
         </div>
         <%= will_paginate @aircrafts, renderer: BootstrapPagination::Rails %>
 
