@@ -10,69 +10,11 @@ a {
   text-decoration: none;
 }
 
-
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  font-family: "Copperplate";
-  z-index: 10;
-}
-
 .container {
   max-width: 1170px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 16px;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-center {
-  float:left;
-  position: relative;
-  left: 20%;
-
-}
-
-.header-center a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-}
-
-.header-center a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-}
-
-.header-right a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  text-decoration: none;
 }
 
 .top-wrapper {
